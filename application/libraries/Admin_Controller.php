@@ -1,13 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_Controller extends CI_Controller {
+class Admin_Controller extends MY_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
-		//Do your magic here
+		$this->data['opcion'] = $this->uri->segment(2);
 	}
+
 	public function index()
 	{
 
